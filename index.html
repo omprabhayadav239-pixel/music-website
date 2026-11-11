@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111210" />
+    <meta
+      name="description"
+      content="Find your next favorite song on VYBE — good music for all your moments."
+    />
+    <title>VYBE — music for the in-between</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="VYBE home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none">
+              <path d="M19 5v16.5a4 4 0 1 1-3-3.87V9l11-2.5v11a4 4 0 1 1-3-3.87V4l-5 1Z" />
+            </svg>
+          </span>
+          <span>VYBE</span>
+        </a>
+
+        <div class="nav-group">
+          <p class="nav-label">YOUR SPACE</p>
+          <nav class="primary-nav">
+            <a class="nav-link active" href="#discover" aria-current="page">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1V10Z" /></svg>
+              <span>Discover</span>
+            </a>
+            <a class="nav-link" href="#albums">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3" /><path d="M12 3v6" /></svg>
+              <span>Albums</span>
+            </a>
+            <a class="nav-link" href="#playlists">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10" /><path d="m17 16 4 2-4 2v-4Z" /></svg>
+              <span>Playlists</span>
+            </a>
+            <a class="nav-link" href="#artists">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="4" /><path d="M2 21a7 7 0 0 1 14 0M16 4a4 4 0 0 1 0 8m2 3a6 6 0 0 1 4 6" /></svg>
+              <span>Artists</span>
+            </a>
+          </nav>
+        </div>
+
+        <div class="nav-group collection-group">
+          <div class="nav-label-row">
+            <p class="nav-label">YOUR COLLECTION</p>
+            <button class="icon-button add-playlist" type="button" aria-label="Create a playlist" title="Create a playlist">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" /></svg>
+            </button>
+          </div>
+          <nav class="collection-nav" aria-label="Your playlists">
+            <a href="#playlists" class="collection-link"><span class="collection-dot dot-peach"></span>Sunday slowdown</a>
+            <a href="#playlists" class="collection-link"><span class="collection-dot dot-blue"></span>Little blue hours</a>
+            <a href="#playlists" class="collection-link"><span class="collection-dot dot-green"></span>Kitchen dancing</a>
+            <a href="#playlists" class="collection-link"><span class="collection-dot dot-purple"></span>Saved for later</a>
+            <a href="#punjabi-picks" class="collection-link"><span class="collection-dot dot-peach"></span>Punjabi hits</a>
+          </nav>
+        </div>
+
+        <div class="sidebar-note">
+          <div class="note-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M14 4v12.5a3.5 3.5 0 1 1-2.5-3.35V7l8-2v9.5a3.5 3.5 0 1 1-2.5-3.35V3.5L14 4Z" /></svg>
+          </div>
+          <p>A little more music.<br />A little less noise.</p>
+          <span>MADE FOR YOUR MOMENTS</span>
+        </div>
+
+        <button class="profile-button" type="button" aria-label="Open profile for Alex Morgan">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=96&q=80" alt="" />
+          <span class="profile-copy"><strong>Alex Morgan</strong><small>Free listener</small></span>
+          <svg class="profile-more" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1" /><circle cx="12" cy="12" r="1" /><circle cx="19" cy="12" r="1" /></svg>
+        </button>
+      </aside>
+
+      <main class="main-content" id="discover">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>Good afternoon, Alex</span><span class="breadcrumb-dot">/</span><span class="breadcrumb-current">Your listening room</span></div>
+          <div class="topbar-actions">
+            <label class="search-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" /><path d="m16 16 5 5" /></svg>
+              <input id="search-input" type="search" placeholder="Songs, artists, albums..." autocomplete="off" aria-label="Search music" />
+              <kbd>/</kbd>
+            </label>
+            <a class="sign-in-link" href="login.html">Sign in <span aria-hidden="true">↗</span></a>
+            <button class="icon-button notification-button" type="button" aria-label="Notifications">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4" /></svg>
+              <span class="notification-dot"></span>
+            </button>
+          </div>
+        </header>
+
+        <div class="content-inner">
+          <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy">
+              <p class="eyebrow"><span class="eyebrow-line"></span> YOUR DAILY MIX
+                <svg class="eyebrow-waves" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 9v6m4-10v14m4-17v20m4-15v10m4-13v16m4-11v6" />
+                </svg>
+              </p>
+              <h1 id="hero-title">A softer kind<br />of <em>soundtrack.</em></h1>
+              <p class="hero-description">A thoughtful little mix for wherever the day takes you. Fresh finds, familiar favorites, all in one place.</p>
+              <div class="hero-actions">
+                <button class="button button-primary" type="button" data-play-track="0">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 12 7-12 7V5Z" /></svg>
+                  Play your mix
+                </button>
+                <span class="mix-meta"><span class="mix-avatar-stack"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=48&q=80" alt="" /><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=48&q=80" alt="" /><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=48&q=80" alt="" /></span>for you, always</span>
+              </div>
+            </div>
+            <div class="hero-art" aria-label="Abstract warm-toned album artwork">
+              <div class="hero-art-glow"></div>
+              <div class="hero-art-ring ring-one"></div>
+              <div class="hero-art-ring ring-two"></div>
+              <div class="hero-art-orb"></div>
+              <div class="hero-art-label"><span>VYBE SELECTS</span><strong>VOL. 08</strong></div>
+              <div class="hero-art-caption">a collection for<br />the in-between</div>
+            </div>
+            <div class="hero-index">01 <span>/</span> 04</div>
+          </section>
+
+          <section class="section-block" id="albums" aria-labelledby="albums-title">
+            <div class="section-heading">
+              <div><p class="section-kicker">A GOOD PLACE TO START</p><h2 id="albums-title">On your wavelength</h2></div>
+              <button class="text-link" type="button" data-scroll="albums-grid">See all <span>↗</span></button>
+            </div>
+            <div class="album-grid" id="albums-grid"></div>
+          </section>
+
+          <section class="section-block" id="indian-picks" aria-labelledby="indian-title">
+            <div class="section-heading">
+              <div><p class="section-kicker">A LITTLE CLOSER TO HOME</p><h2 id="indian-title">Indian favorites</h2></div>
+              <span class="section-note">HINDI · BOLLYWOOD · INDIE</span>
+            </div>
+            <div class="album-grid" id="indian-grid"></div>
+          </section>
+          <p class="empty-state" id="search-empty" hidden>No music found. Try a different search.</p>
+
+          <section class="section-block" id="punjabi-picks" aria-labelledby="punjabi-title">
+            <div class="section-heading">
+              <div><p class="section-kicker">PUNJABI, ON REPEAT</p><h2 id="punjabi-title">Punjabi favorites</h2></div>
+              <span class="section-note">FULL SONGS ON APPLE MUSIC ↗</span>
+            </div>
+            <div class="album-grid" id="punjabi-grid"></div>
+          </section>
+
+          <section class="section-block artist-discovery-section" id="artist-discovery" aria-labelledby="artist-discovery-title">
+            <div class="section-heading">
+              <div><p class="section-kicker">MEET YOUR NEXT FAVORITE</p><h2 id="artist-discovery-title">Artists to know</h2></div>
+              <span class="section-note">A LITTLE BIT OF EVERYTHING</span>
+            </div>
+            <div class="artist-grid" id="artist-grid"></div>
+          </section>
+
+          <section class="section-block playlist-section" id="playlists" aria-labelledby="playlists-title">
+            <div class="section-heading">
+              <div><p class="section-kicker">MADE FOR THE MOMENT</p><h2 id="playlists-title">A little moodboard</h2></div>
+              <button class="text-link" type="button" data-scroll="playlist-grid">Explore playlists <span>↗</span></button>
+            </div>
+            <div class="playlist-grid" id="playlist-grid"></div>
+          </section>
+
+          <section class="section-block artist-section" id="artists" aria-labelledby="artists-title">
+            <div class="section-heading artist-heading">
+              <div><p class="section-kicker">ON OUR RADAR</p><h2 id="artists-title">Artist of the week</h2></div>
+              <button class="text-link" type="button" data-play-track="9">Listen to the story <span>↗</span></button>
+            </div>
+            <div class="artist-feature">
+              <div class="artist-photo-wrap">
+                <img class="artist-photo" src="https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/f0/8c/2a/f08c2aeb-3903-8738-d0a5-8c2e4547eed7/5054197711039.jpg/900x900bb.jpg" alt="Heeriye single artwork" />
+                <span class="artist-photo-caption">HEERIYE · SINGLE</span>
+              </div>
+              <div class="artist-bio">
+                <span class="artist-verified"><span>✓</span> FEATURED ARTIST</span>
+                <h3>Jasleen Royal</h3>
+                <p class="artist-genre">Indian pop <span>·</span> India</p>
+                <p class="artist-description">Singer-songwriter Jasleen Royal brings a bright, intimate touch to Indian pop. Start with “Heeriye,” her warm duet with Arijit Singh.</p>
+                <div class="artist-stats"><div><strong>HEERIYE</strong><span>start here</span></div><div><strong>INDIA</strong><span>featured scene</span></div></div>
+                <button class="button button-light" type="button" data-play-track="9">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 12 7-12 7V5Z" /></svg>
+                  Listen to Jasleen
+                </button>
+              </div>
+              <div class="artist-index">02 <span>/ 04</span></div>
+            </div>
+          </section>
+          <footer class="page-footer"><span>Made for listening, not scrolling.</span><span>© VYBE 2026</span></footer>
+        </div>
+      </main>
+    </div>
+
+    <footer class="player-bar" aria-label="Audio player">
+      <audio id="audio-player" preload="metadata"></audio>
+      <div class="now-playing">
+        <img class="now-playing-cover" id="player-cover" src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=120&q=80" alt="" />
+        <div class="now-playing-details"><strong id="player-title">Choose a song</strong><span id="player-artist">Your next favorite is waiting</span></div>
+        <button class="icon-button player-like" id="like-button" type="button" aria-label="Like track" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 5.2-8.8 11-8.8 11S3.2 14 3.2 8.8A4.8 4.8 0 0 1 12 6.2a4.8 4.8 0 0 1 8.8 2.6Z" /></svg>
+        </button>
+        <button class="icon-button expand-button" type="button" aria-label="Show player details" aria-expanded="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 14 5-5 5 5" /></svg>
+        </button>
+      </div>
+      <div class="player-center">
+        <div class="player-controls">
+          <button class="icon-button control-button" id="shuffle-button" type="button" aria-label="Toggle shuffle" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M4 4l5 5m4 4 8 8" /></svg>
+          </button>
+          <button class="icon-button control-button" id="previous-button" type="button" aria-label="Previous track">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M19 5 8 12l11 7V5Z" /></svg>
+          </button>
+          <button class="play-button" id="play-button" type="button" aria-label="Play">
+            <svg class="play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 12 7-12 7V5Z" /></svg>
+            <svg class="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h3v14H8zM15 5h3v14h-3z" /></svg>
+          </button>
+          <button class="icon-button control-button" id="next-button" type="button" aria-label="Next track">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 5v14M5 5l11 7-11 7V5Z" /></svg>
+          </button>
+          <button class="icon-button control-button" id="repeat-button" type="button" aria-label="Toggle repeat" aria-pressed="false">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m17 2 4 4-4 4M3 11V9a3 3 0 0 1 3-3h15M7 22l-4-4 4-4m14-1v2a3 3 0 0 1-3 3H3" /></svg>
+          </button>
+        </div>
+        <div class="waveform" id="waveform" role="img" aria-label="Track waveform"></div>
+        <div class="timeline">
+          <span class="time-label" id="current-time">0:00</span>
+          <input id="seek-slider" class="range-slider seek-slider" type="range" min="0" max="100" value="0" aria-label="Seek through track" />
+          <span class="time-label" id="duration-time">0:00</span>
+        </div>
+      </div>
+      <div class="player-extras">
+        <button class="icon-button queue-button" type="button" aria-label="Open queue">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h12M4 18h8" /><path d="m17 15 4 3-4 3v-6Z" /></svg>
+        </button>
+        <div class="volume-control">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5ZM15.5 8.5a5 5 0 0 1 0 7m3-10a9 9 0 0 1 0 13" /></svg>
+          <input id="volume-slider" class="range-slider volume-slider" type="range" min="0" max="1" step="0.01" value="0.72" aria-label="Volume" />
+        </div>
+      </div>
+    </footer>
+    <dialog class="detail-dialog" id="detail-dialog" aria-labelledby="detail-title">
+      <button class="detail-close" type="button" aria-label="Close details">×</button>
+      <div class="detail-content">
+        <img class="detail-cover" id="detail-cover" src="" alt="" />
+        <div class="detail-heading">
+          <p class="section-kicker" id="detail-kicker">VYBE PICKS</p>
+          <h2 id="detail-title"></h2>
+          <p id="detail-description"></p>
+        </div>
+      </div>
+      <div class="detail-track-list" id="detail-track-list"></div>
+    </dialog>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
